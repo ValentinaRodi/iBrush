@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  @extend %font-prim;
+  @include font($size: 1.8rem, $height: 2.4rem, $weight: normal);
+}
+
+h1 {
+  @include font($size: 4.8rem, $height: 4.8rem, $weight: 700);
+  color: $color-primary;
+  text-align: center;
+
+  @include media-mobile {
+      @include font($height: 2.3rem, $size: 2.5rem);
+  }
+}
+
+h2 {
+  @extend %font-prim;
+  @include font($size: 2.8rem, $height: 3.6rem, $weight: 400);
+  color: $color-title;
+
+  @include media-mobile {
+    @include font($height: 3.6rem, $size: 2.3rem, $weight: 700);
+}
+}

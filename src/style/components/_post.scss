@@ -1,0 +1,35 @@
+.post {
+  padding-top: 60px;
+  padding-bottom: 75px;
+
+  @include media-mobile {
+    padding-top: 36px;
+    padding-bottom: 66px;
+  }
+}
+
+.post__info {
+  width: 226px;
+}
+
+.post__img {
+  width: 226px;
+  height: 226px;
+
+  @include media-mobile {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+.post__text {
+  @extend %font-prim;
+  @include font($size: 1.8rem, $height: 2.4rem, $weight: 700);
+  color: #272522;
+  width: 208px;
+
+  @include media-mobile {
+    display: inline-block;
+    margin-top: 20px;
+  }
+}

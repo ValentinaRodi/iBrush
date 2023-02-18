@@ -1,0 +1,157 @@
+.form-block {
+  background: $color-background;
+  padding-top: 40px;
+}
+
+.form__text {
+  @extend %font-prim;
+  @include font($size: 1.8rem, $height: 1.8rem, $weight: 700);
+  color: $color-text;
+  margin-bottom: 10px;
+
+  @include media-mobile {
+    margin-bottom: 15px;
+    @include font($size: 1.6rem, $height: 1.8rem, $weight: 700);
+  }
+}
+
+.form__info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  @include media-mobile {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+}
+
+.info__input {
+  box-sizing: border-box;
+  min-width: 226px;
+  height: 50px;
+  background: $color-light;
+  border: 1px solid $color-light;
+  border-radius: 6px;
+  padding: 0 20px;
+  outline: 2px solid $color-light;
+
+  @extend %font-conclusion;
+  @include font($size: 1.4rem, $height: 1.5rem);
+  color: $color-text;
+
+  &_btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-grey;
+    text-align: start;
+  }
+
+  &::placeholder {
+    @include font($size: 1.4rem, $height: 1.4rem);
+    color: $color-grey;
+  }
+
+  &:focus {
+    outline: 2px solid #7f7f7f;
+  }
+
+  @include media-mobile {
+    min-width: 280px;
+  }
+}
+
+.btn__arrow {
+  display: inline-block;
+  margin-bottom: 8px;
+
+}
+
+.btn-popup {
+  position: relative;
+}
+
+.popup__book_text {
+  @extend %font-conclusion;
+  @include font($size: 1.4rem, $height: 1.5rem);
+  color: $color-text;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+.form__popup {
+  position: absolute;
+  width: 226px;
+  height: 183px;
+  left: 0px;
+  top: 60px;
+  background-color: $color-light;
+  box-shadow: 0px 2px 15px rgba(154, 154, 154, 0.5);
+}
+
+.popup__book {
+  display: block;
+  list-style-type: none;
+  @extend %font-conclusion;
+  @include font($size: 1.4rem, $height: 4.6rem);
+  color: #222222;
+  padding-left: 18px;
+  border-left: 7px solid $color-light;
+
+  &:hover {
+    background: $color-background;
+    border-left: 7px solid $color-primary;
+  }
+}
+
+.form__feedback {
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  width: 738px;
+  height: 120px;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  padding: 20px;
+
+  resize: none;
+
+  &:focus {
+    outline: 2px solid #7f7f7f;
+  }
+
+  @include media-mobile {
+    width: 90vw;
+  }
+}
+
+.form__div_btn {
+  padding-bottom: 40px;
+}
+
+.form__btn {
+  width: 226px;
+  height: 44px;
+  background: $color-primary;
+  border: none;
+  border-radius: 2px;
+
+  @extend %font-books;
+  @include font($size: 1.4rem, $height: 1.6rem);
+  color: $color-light;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  @include media-mobile {
+    width: 280px;
+  }
+}

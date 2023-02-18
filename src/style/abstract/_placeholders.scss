@@ -1,0 +1,58 @@
+%transition {
+  transition: all 0.2s ease-out;
+}
+
+@font-face {
+  font-family: "Consolas";
+  src: local("Consolas"), url("fonts/consolas.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: local("Merriweather"),
+    url("fonts/Merriweather-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Arial";
+  src: local("Arial"), url("fonts/ofont.ru_Arial.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans"), url("fonts/OpenSans-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ArialMT";
+  src: local("ArialMT"), url("fonts/02587_ARIALMT.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: local("Helvetica"), url("fonts/helvetica_regular.otf") format("truetype");
+}
+
+%font-prim {
+  font-family: "Consolas", sans-serif;
+}
+
+%font-data {
+  font-family: "Merriweather", sans-serif;
+}
+
+%font-books {
+  font-family: "Arial", sans-serif;
+}
+
+%font-info {
+  font-family: "OpenSans", sans-serif;
+}
+
+%font-conclusion {
+  font-family: "ArialMT", sans-serif;
+}
+
+%font-public {
+  font-family: "Helvetica", sans-serif;
+}

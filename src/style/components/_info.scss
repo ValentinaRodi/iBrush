@@ -1,0 +1,44 @@
+.info {
+  padding-top: 55px;
+  margin-bottom: 45px;
+
+  @include media-mobile {
+    padding-top: 34px;
+    margin-bottom: 26px;
+  }
+}
+
+.info__block {
+  margin-top: 21px;
+
+  @include media-mobile {
+    margin-top: 12px;
+  }
+}
+
+.info__img {
+  height: 34px;
+  width: 34px;
+}
+
+.info__text {
+  @extend %font-info;
+  @include font($size: 2rem, $height: 2.4rem, $weight: normal);
+  font-style: italic;
+  color: $color-text-data-info;
+
+  @include media-mobile {
+    @include font($size: 1.4rem, $height: 2rem, $weight: normal);
+  }
+}
+
+.info__text_autor {
+  @include font($size: 1.8rem, $height: 2.4rem, $weight: normal);
+  font-style: italic;
+  color: $color-grey;
+  margin-top: 20px;
+
+  @include media-mobile {
+    @include font($size: 1.4rem, $height: 2rem, $weight: normal);
+  }
+}
