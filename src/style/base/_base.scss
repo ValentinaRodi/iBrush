@@ -13,7 +13,7 @@ body {
 }
 
 h1 {
-  @include font($size: 4.8rem, $height: 4.8rem, $weight: 700);
+  @include font($size: 4.8rem, $height: 5.5rem, $weight: 700);
   color: $color-primary;
   text-align: center;
 

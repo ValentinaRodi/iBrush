@@ -23,8 +23,6 @@
 .item {
   @include media-mobile {
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     flex-shrink: 0;
     flex-direction: column;
@@ -81,10 +79,7 @@
   @include media-mobile {
     margin-top: 24px;
     display: block;
-    max-width: 420px;
-    width: calc(100% - 20px);
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 100%;
   }
 }
 

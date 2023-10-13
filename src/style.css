@@ -49,7 +49,7 @@ code {
   font-family: "OpenSans", sans-serif;
 }
 
-.popup__book, .popup__book_text, .info__input, .conclusion__text {
+.popup__book, .popup__book_text, .form-label, .conclusion__text {
   font-family: "ArialMT", sans-serif;
 }
 
@@ -76,7 +76,7 @@ body {
 h1 {
   font-size: 4.8rem;
   font-style: normal;
-  line-height: 4.8rem;
+  line-height: 5.5rem;
   font-weight: 700;
   color: #0062FF;
   text-align: center;
@@ -154,29 +154,40 @@ h2 {
   }
 }
 
-.books__title {
-  overflow: hidden;
-  text-align: center;
-}
-
-.books-block {
+.books__block {
   display: flex;
   flex-direction: column;
   margin-top: 64px;
 }
 @media (max-width: 767px) {
-  .books-block {
+  .books__block {
     flex-direction: column-reverse;
     margin-top: 40px;
+  }
+}
+
+.books__title {
+  overflow: hidden;
+  text-align: center;
+}
+
+.books-scroll {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 767px) {
+  .books-scroll {
+    flex-direction: column-reverse;
+    margin-top: 30px;
     overflow-x: auto;
   }
-  .books-block::-webkit-scrollbar {
+  .books-scroll::-webkit-scrollbar {
     height: 4px;
   }
-  .books-block::-webkit-scrollbar-track {
+  .books-scroll::-webkit-scrollbar-track {
     background: #e6e6e6;
   }
-  .books-block::-webkit-scrollbar-thumb {
+  .books-scroll::-webkit-scrollbar-thumb {
     background-color: #0062FF;
     border-radius: 20px;
   }
@@ -213,7 +224,12 @@ h2 {
   width: 738px;
   height: 300px;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .books__info {
+    margin-bottom: 20px;
+  }
 }
 
 .block-data {
@@ -344,11 +360,12 @@ h2 {
 }
 
 .public__block {
-  padding-top: 34px;
+  padding: 34px 0;
 }
 @media (max-width: 767px) {
   .public__block {
-    padding-top: 22px;
+    width: 100%;
+    padding: 20px 0;
   }
 }
 
@@ -382,8 +399,9 @@ h2 {
 @media (max-width: 767px) {
   .public__img {
     background-image: url(../src/images/Photo_mobile.png);
-    width: 280px;
-    height: 200px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -451,68 +469,100 @@ h2 {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  padding-top: 10px;
 }
 @media (max-width: 767px) {
   .form__info {
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 20px;
+    padding-top: 0;
   }
 }
 
-.info__input {
-  box-sizing: border-box;
-  min-width: 226px;
-  height: 50px;
-  background: #fff;
-  border: 1px solid #fff;
-  border-radius: 6px;
-  padding: 0 20px;
-  outline: 2px solid #fff;
-  font-size: 1.4rem;
-  font-style: normal;
-  line-height: 1.5rem;
-  font-weight: normal;
-  color: #202326;
-}
-.info__input_btn {
+.form__select {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #777777;
   text-align: start;
+  padding: 0 15px;
 }
-.info__input::-moz-placeholder {
-  font-size: 1.4rem;
-  font-style: normal;
-  line-height: 1.4rem;
-  font-weight: normal;
-  color: #777777;
+.form__select:focus {
+  outline: 3px solid #7f7f7f;
 }
-.info__input::placeholder {
-  font-size: 1.4rem;
-  font-style: normal;
-  line-height: 1.4rem;
-  font-weight: normal;
-  color: #777777;
+
+.form__item {
+  position: relative;
+  width: 226px;
+  height: 50px;
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  outline: 2px solid #fff;
 }
-.info__input:focus {
-  outline: 2px solid #7f7f7f;
+.form__item:focus-within {
+  outline: 3px solid #7f7f7f;
 }
 @media (max-width: 767px) {
-  .info__input {
-    min-width: 280px;
+  .form__item {
+    width: 100%;
   }
+}
+
+.form-item_big {
+  height: 120px;
+  width: 100%;
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background: none;
+  padding: 2px 15px;
+  padding-top: 13px;
+}
+.form-input:focus {
+  outline: none;
+}
+
+.form-label {
+  position: absolute;
+  font-size: 1.4rem;
+  font-style: normal;
+  line-height: 1.5rem;
+  font-weight: normal;
+  pointer-events: none;
+  left: 15px;
+  right: 0;
+  top: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 40px;
+  transition: 0.3s;
+  color: #777777;
+}
+
+.form-input:focus ~ .form-label,
+.form-input:not(:focus):valid ~ .form-label {
+  top: -7px;
 }
 
 .btn__arrow {
   display: inline-block;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
+  margin-left: 10px;
 }
 
 .btn-popup {
   position: relative;
+}
+@media (max-width: 767px) {
+  .btn-popup {
+    width: 100%;
+  }
 }
 
 .popup__book_text {
@@ -539,9 +589,16 @@ h2 {
   top: 60px;
   background-color: #fff;
   box-shadow: 0px 2px 15px rgba(154, 154, 154, 0.5);
+  z-index: 100;
+}
+@media (max-width: 767px) {
+  .form__popup {
+    width: 100%;
+  }
 }
 
 .popup__book {
+  cursor: pointer;
   display: block;
   list-style-type: none;
   font-size: 1.4rem;
@@ -558,27 +615,29 @@ h2 {
 }
 
 .form__feedback {
+  position: relative;
   margin-bottom: 20px;
   box-sizing: border-box;
   width: 738px;
   height: 120px;
-  background: #ffffff;
-  border: 1px solid #e6e6e6;
+  background: #FFFFFF;
+  border: none;
   border-radius: 6px;
-  padding: 20px;
+  padding: 30px 15px;
   resize: none;
 }
 .form__feedback:focus {
-  outline: 2px solid #7f7f7f;
+  outline: none;
 }
 @media (max-width: 767px) {
   .form__feedback {
-    width: 90vw;
+    width: 100%;
   }
 }
 
 .form__div_btn {
   padding-bottom: 40px;
+  margin-top: 20px;
 }
 
 .form__btn {
@@ -597,8 +656,13 @@ h2 {
 }
 @media (max-width: 767px) {
   .form__btn {
-    width: 280px;
+    width: 100%;
   }
+}
+
+.select-text {
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .post {
@@ -622,8 +686,8 @@ h2 {
 }
 @media (max-width: 767px) {
   .post__img {
-    width: 260px;
-    height: 260px;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -647,7 +711,7 @@ h2 {
 }
 @media (max-width: 767px) {
   .full-stars {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -713,8 +777,6 @@ h2 {
 @media (max-width: 767px) {
   .item {
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     flex-shrink: 0;
     flex-direction: column;
@@ -773,10 +835,7 @@ h2 {
   .gallary {
     margin-top: 24px;
     display: block;
-    max-width: 420px;
-    width: calc(100% - 20px);
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 100%;
   }
 }
 

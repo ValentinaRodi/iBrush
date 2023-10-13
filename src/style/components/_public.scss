@@ -10,10 +10,11 @@
 }
 
 .public__block {
-  padding-top: 34px;
+  padding: 34px 0;
 
   @include media-mobile {
-    padding-top: 22px;
+    width: 100%;
+    padding: 20px 0;
   }
 }
 
@@ -36,12 +37,14 @@
 
 .public__img {
   background-image: url(../src/images/public.png);
+  
   width: 610px;
   height: 200px;
 
   @include media-mobile {
     background-image: url(../src/images/Photo_mobile.png);
-    width: 280px;
-    height: 200px;
+    width: 100%;
+    background-repeat: no-repeat;
+  background-size: cover;
   }
 }

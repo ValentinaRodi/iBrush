@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitbucket</title>
+    <title>Site</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,18 +12,22 @@
         <div class="books__title">
             <h1>Путь JavaScript</h1>
         </div>
-        <div class="books-block mycustom-scroll" data-mcs-theme="3d-dark">
-            <div class="books__info">
-                <div class="block-data layout-2-column">
-                    <div class="layout-2-row">
-                        <p class="data__text">12</p>
-                        <img src="./images/triangle.png" alt="Triangle"/>
+        <div class="books__block">
+            <div class="books-scroll">
+                <div class="books__info">
+                    <div class="block-data layout-2-column">
+                        <div class="layout-2-row">
+                            <p class="data__text">12</p>
+                            <img src="./images/triangle.png" alt="Triangle"/>
+                        </div>
+                        <p class="data__text_mounth">Апреля</p>
                     </div>
-                    <p class="data__text_mounth">Апреля</p>
                 </div>
             </div>
-            <p class="books__text books__text_display">Middle...</p>
-            <p class="books__text">Можно выделить три основных направления для прогресса JavaScript </p>
+            <div>
+                <p class="books__text">Можно выделить три основных направления для прогресса JavaScript </p>
+                <p class="books__text books__text_display">Middle...</p>
+            </div>
         </div>
     </section>
     <section class="wrapper info">
@@ -37,7 +41,7 @@
         </div>
     </section>
     <section class="public">
-        <div class="public__block">
+        <div class="wrapper public__block">
             <p class="public__text">Реклама на <span><a href="#" class="public__link">blabla.com</a></span></p>
             <div class="public__img"></div>
         </div>
@@ -53,31 +57,31 @@
                 <div class="rating-group">
                     <input name="fst" value="0" type="radio" disabled checked />   
                     <label for="fst-1">
-                        <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="25" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="fa-star" data-rating="1" d="M12.7327 18.3074L12.5 18.1851L12.2673 18.3074L5.81675 21.6987L7.0487 14.5159L7.09314 14.2568L6.9049 14.0733L1.68627 8.98641L8.89824 7.93845L9.15838 7.90065L9.27471 7.66493L12.5 1.12978L15.7253 7.66493L15.8416 7.90065L16.1018 7.93845L23.3137 8.98641L18.0951 14.0733L17.9069 14.2568L17.9513 14.5159L19.1833 21.6987L12.7327 18.3074Z" stroke="#979797"/>
                         </svg>  
                     </label>
                     <input name="fst" id="fst-1" value="1" type="radio" />   
                     <label for="fst-2">
-                        <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="25" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="fa-star" data-rating="1" d="M12.7327 18.3074L12.5 18.1851L12.2673 18.3074L5.81675 21.6987L7.0487 14.5159L7.09314 14.2568L6.9049 14.0733L1.68627 8.98641L8.89824 7.93845L9.15838 7.90065L9.27471 7.66493L12.5 1.12978L15.7253 7.66493L15.8416 7.90065L16.1018 7.93845L23.3137 8.98641L18.0951 14.0733L17.9069 14.2568L17.9513 14.5159L19.1833 21.6987L12.7327 18.3074Z" stroke="#979797"/>
                         </svg>  
                     </label>
                     <input name="fst" id="fst-2" value="2" type="radio" />   
                     <label for="fst-3">
-                        <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="25" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="fa-star" data-rating="1" d="M12.7327 18.3074L12.5 18.1851L12.2673 18.3074L5.81675 21.6987L7.0487 14.5159L7.09314 14.2568L6.9049 14.0733L1.68627 8.98641L8.89824 7.93845L9.15838 7.90065L9.27471 7.66493L12.5 1.12978L15.7253 7.66493L15.8416 7.90065L16.1018 7.93845L23.3137 8.98641L18.0951 14.0733L17.9069 14.2568L17.9513 14.5159L19.1833 21.6987L12.7327 18.3074Z" stroke="#979797"/>
                         </svg>  
                     </label>
                     <input name="fst" id="fst-3" value="3" type="radio" />       
                     <label for="fst-4">
-                        <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="25" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="fa-star" data-rating="1" d="M12.7327 18.3074L12.5 18.1851L12.2673 18.3074L5.81675 21.6987L7.0487 14.5159L7.09314 14.2568L6.9049 14.0733L1.68627 8.98641L8.89824 7.93845L9.15838 7.90065L9.27471 7.66493L12.5 1.12978L15.7253 7.66493L15.8416 7.90065L16.1018 7.93845L23.3137 8.98641L18.0951 14.0733L17.9069 14.2568L17.9513 14.5159L19.1833 21.6987L12.7327 18.3074Z" stroke="#979797"/>
                         </svg>  
                     </label>
                     <input name="fst" id="fst-4" value="4" type="radio" />  
                     <label for="fst-5">
-                        <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="25" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="fa-star" data-rating="1" d="M12.7327 18.3074L12.5 18.1851L12.2673 18.3074L5.81675 21.6987L7.0487 14.5159L7.09314 14.2568L6.9049 14.0733L1.68627 8.98641L8.89824 7.93845L9.15838 7.90065L9.27471 7.66493L12.5 1.12978L15.7253 7.66493L15.8416 7.90065L16.1018 7.93845L23.3137 8.98641L18.0951 14.0733L17.9069 14.2568L17.9513 14.5159L19.1833 21.6987L12.7327 18.3074Z" stroke="#979797"/>
                         </svg>  
                     </label>
@@ -86,14 +90,18 @@
             </div>
             <p class="form__text">Добавить комментарий к книге</p> 
             <div class="form__info">
-                <input class="info__input" type="text" placeholder="Имя">
-                <input class="info__input" type="email" placeholder="E-mail">
+                <div class="form__item">
+                    <input type="text" class="form-input" required>
+                    <label class="form-label">Имя</label>
+                </div>
+                <div class="form__item">
+                    <input type="text" class="form-input" required>
+                    <label class="form-label">E-mail</label>
+                </div>
                 <div class="btn-popup">
-                    <button class="info__input info__input_btn">
-                        Выберите книгу
-                        <span>
-                            <img class="btn__arrow" src="./images/angle-arrow-down.png" alt="arrow-down"/>                            
-                        </span>
+                    <button class="form__item form__select" onclick="event.preventDefault()">
+                        <p class="select-text">Выберите книгу</p>
+                        <img class="btn__arrow" src="./images/angle-arrow-down.png" alt="arrow-down"/>                            
                     </button>
                     <div class="display-none form__popup">
                         <li class="popup__book" id="JavaScript ниндзя">JavaScript ниндзя</li>
@@ -103,9 +111,12 @@
                     </div> 
                 </div>    
             </div>
-            <textarea class="form__feedback" minlength="100" placeholder="Ваш отзыв"></textarea>
+            <div class="form__item form-item_big">
+                <textarea class="form__feedback form-input" minlength="100" required></textarea>
+                <label class="form-label">Ваш отзыв</label>
+            </div>
             <div class="form__div_btn">
-                <button class="form__btn">Отправить</button>       
+                <button class="form__btn" onclick="event.preventDefault()">Отправить</button>       
             </div>
         </form>
     </section>

@@ -8,12 +8,7 @@
   }
 }
 
-.books__title {
-  overflow: hidden;
-  text-align: center;
-}
-
-.books-block {
+.books__block {
   display: flex;
   flex-direction: column;
   margin-top: 64px;
@@ -21,6 +16,21 @@
   @include media-mobile {
     flex-direction: column-reverse;
     margin-top: 40px;
+  }
+}
+
+.books__title {
+  overflow: hidden;
+  text-align: center;
+}
+
+.books-scroll {
+  display: flex;
+  flex-direction: column;
+
+  @include media-mobile {
+    flex-direction: column-reverse;
+    margin-top: 30px;
 
     overflow-x: auto;
 
@@ -54,10 +64,12 @@
   background-color: #dbdbdb;
   position: relative;
 }
+
 .books__title:before {
   margin-left: -100%;
   left: -14px;
 }
+
 .books__title:after {
   margin-right: -100%;
   right: -14px;
@@ -69,7 +81,11 @@
   width: 738px;
   height: 300px;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+
+  @include media-mobile {
+    margin-bottom: 20px;
+  }
 }
 
 .block-data {
